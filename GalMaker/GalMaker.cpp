@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-	cout << "Hello Git!\n";
+	cout << "Hello Git Bash!\n";
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
