@@ -7,7 +7,8 @@ using namespace std;
 
 int main()
 {
-	cout << "Hello Git Bash!\n";
+	cout << "Hello Git Bash!\n"<<endl;
+	cout << "Hello olden!\n" << endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
