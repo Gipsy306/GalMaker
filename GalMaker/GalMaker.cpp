@@ -10,6 +10,7 @@ int main()
 	cout << "Hello Git Bash!\n"<<endl;
 	cout << "Hello olden!\n" << endl;
 	cout << "Hello 123!" << endl;
+	cout << "Hello  456!" << endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
