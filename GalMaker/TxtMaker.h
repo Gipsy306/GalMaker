@@ -3,7 +3,9 @@
 #ifndef TXTMAKER_H
 #define TXTMAKER_H
 
-
+//调取 "FileController" 类S
+#include"FileController.h"
+//将文件的有关操作写入对应的".txt"文件中
 class FiletoTxt
 {
 private:
