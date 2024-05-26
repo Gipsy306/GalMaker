@@ -16,7 +16,6 @@ using namespace std;
 class Folder
 {
 private:
-	const char* FolderName;
 	static Folder* pFolder;
 public:
 	/*返回已经创建完成的类的实例*/
