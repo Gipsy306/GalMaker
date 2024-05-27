@@ -10,7 +10,7 @@ static ExMessage mouse;
 
 int main()
 {
-	setbkcolor(WHITE);
+	//setbkcolor(WHITE);
 	initgraph(900, 600);
 	cout << "Hello Git Bash!\n"<<endl;
 	cout << "Hello olden!\n" << endl;
