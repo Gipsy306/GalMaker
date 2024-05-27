@@ -36,21 +36,21 @@ public:
 	int length;
 	int width;
 	/*选择框上的标签*/
-	string box_title;
+	const char* box_title;
 	/*选择框的格式*/
 	int box_type;
 /*选择框的构造函数*/
-	ChooseBox(int xx,int yy,int ll,int ww,string title,int type):box_x(xx),box_y(yy),length(ll),width(ww),box_title(title),box_type(type){}
-	ChooseBox(int xx, int yy, int ll, int ww, string title) :box_x(xx), box_y(yy), length(ll), width(ww), box_title(title),box_type(DEFAULT) {}
+	ChooseBox(int xx,int yy,int ll,int ww,const char* title,int type):box_x(xx),box_y(yy),length(ll),width(ww),box_title(title),box_type(type){}
+	ChooseBox(int xx, int yy, int ll, int ww, const char* title) :box_x(xx), box_y(yy), length(ll), width(ww), box_title(title),box_type(DEFAULT) {}
 
 /*选择框的函数*/
 	void BoxPrint(ExMessage mouse);
 	/*绘制框的两种形态的函数*/
-	void BoxDraw(bool, bool);
+	void BoxDraw(COLORREF);
 };
 
 
-UI_Basic* UI_Basic::pUI_Basic = new UI_Basic;
+//UI_Basic* UI_Basic::pUI_Basic = new UI_Basic;
 
 //文件处理有关的
 class UI_File
@@ -64,6 +64,6 @@ public:
 	}
 
 };
-UI_File* UI_File::pUI_File = new UI_File;
+//UI_File* UI_File::pUI_File = new UI_File;
 
 #endif // !UI_H

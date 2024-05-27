@@ -6,13 +6,22 @@
 using namespace std;
 
 static ExMessage mouse;
+#include"UI.h"
 
 int main()
 {
+	setbkcolor(WHITE);
+	initgraph(900, 600);
 	cout << "Hello Git Bash!\n"<<endl;
 	cout << "Hello olden!\n" << endl;
 	cout << "Hello 123!" << endl;
 	cout << "Hello  456!" << endl;
+	ChooseBox TestBox(10,10,50,20,"hello");
+	while (true)
+	{
+		TestBox.BoxPrint(mouse);
+	}
+	getchar();
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
