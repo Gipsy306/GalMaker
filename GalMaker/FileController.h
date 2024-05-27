@@ -9,6 +9,7 @@
 #include<string>
 #include<io.h>
 #include<Windows.h>
+#include<vector>
 using namespace std;
 
 //文件夹管理的类
@@ -17,13 +18,19 @@ class Folder
 {
 private:
 	static Folder* pFolder;
+	string* FolderPath;
 public:
 	/*返回已经创建完成的类的实例*/
 	static Folder* getInstance()
 	{
 		return pFolder;
 	}
-	/*打开文件夹*/
+	/*获取指定目录下的特定文件*/
+	void getAllFiles(string path, vector<string>& files, string fileType);
+	
+	/*打开目标文件夹*/
+	void OpenFolder(string choice);
+
 };
 //类外初始化，创建全局变量
 Folder* Folder::pFolder = new Folder;
