@@ -9,6 +9,7 @@
 class FiletoTxt
 {
 private:
+
 public:
 };
 #endif // !TXTMAKER_H

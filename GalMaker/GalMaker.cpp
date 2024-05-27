@@ -5,6 +5,8 @@
 #include<graphics.h>
 using namespace std;
 
+static ExMessage mouse;
+
 int main()
 {
 	cout << "Hello Git Bash!\n"<<endl;
