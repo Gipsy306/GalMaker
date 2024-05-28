@@ -4,11 +4,16 @@
 #include <iostream>
 #include<graphics.h>
 using namespace std;
-
-static ExMessage mouse;
 #include"UI.h"
 
+static ExMessage mouse;
+UI_File* UI_File::pUI_File = new UI_File;
+UI_Basic* UI_Basic::pUI_Basic = new UI_Basic;
+UI_Link* UI_Link::pUI_Link = new UI_Link;
+
+
 int main()
+
 {
 	//setbkcolor(WHITE);
 	initgraph(900, 600);
@@ -18,12 +23,13 @@ int main()
 	cout << "Hello  456!" << endl;
 	ChooseBox TestBox_1[3] = { ChooseBox(10,10,50,20,"Are"),ChooseBox(110,10,50,20,"You"),ChooseBox(210,10,50,20,"OK") };
 	ChooseBox TestBox_2[2] = { ChooseBox(10,110,50,20,"确认"),ChooseBox(110,110,50,20,"取消") };
-	while (true)
+	int a[3] = { 0,1,2 };
+	switch (UI_Link::getInstance()->Link_ChooseBox(TestBox_1, a, 3, mouse))
 	{
-		for (int i = 0; i < 3; i++)
-			TestBox_1[i].BoxPrint(mouse);
-		for (int j = 0; j < 2; j++)
-			TestBox_2[j].BoxPrint(mouse);
+	case (0):cleardevice(); break;
+	case (1):circle(200, 200, 100); break;
+	case (2):circle(100, 100, 50); break;
+	default:break;
 	}
 	getchar();
 }

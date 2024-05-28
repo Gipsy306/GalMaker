@@ -6,16 +6,18 @@ static int err = 1;		//设置边框的长度
 static COLORREF UNCHOSEN_1 = RGB(0, 162, 232);		//未被选中时的颜色
 static COLORREF CHOSEN_1 = RGB(34, 177, 76);		//被选中后的颜色
 
-void ChooseBox::BoxPrint(ExMessage mouse)
+int ChooseBox::BoxPrint(ExMessage mouse)
 {
 	//BoxDraw(UNCHOSEN_1);
 	mouse = getmessage(EX_MOUSE | EX_KEY);
-	if ((mouse.x >= box_x) && (mouse.x <= box_x + length) && (mouse.y >= box_y) && (mouse.y <= box_y + width))
-	{
+	if ((mouse.x >= box_x) && (mouse.x <= box_x + length) && (mouse.y >= box_y) && (mouse.y <= box_y + width)){
 		BoxDraw(CHOSEN_1);
+		return 1;
+
 	}
 	else{
-		BoxDraw(RED);
+		BoxDraw(UNCHOSEN_1);
+		return 0;
 	}
 	
 }
@@ -42,4 +44,24 @@ void ChooseBox::BoxDraw(COLORREF COLORTYPE)
 	f.lfQuality = ANTIALIASED_QUALITY;		// 设置输出效果为抗锯齿  
 	settextstyle(&f);
 	outtextxy(box_x + 2*err, box_y + err, box_title);
+}
+
+int UI_Link::Link_ChooseBox(ChooseBox* choosebox, int* num, int i, ExMessage mouse)
+{
+	while (true)
+	{
+		for (int j = 0; j < i; j++)
+		{
+			if (choosebox[j].BoxPrint(mouse) == 1)
+			{
+				mouse = getmessage(EX_MOUSE | EX_KEY);
+				if (mouse.message == WM_LBUTTONDOWN)
+				{
+					return num[j];
+				}
+				else {}
+			}
+			else {}
+		}
+	}
 }
