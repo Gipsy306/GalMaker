@@ -10,6 +10,7 @@
 #include<io.h>
 #include<Windows.h>
 #include<vector>
+#include"UI.h"
 using namespace std;
 
 //文件夹管理的类
@@ -26,14 +27,14 @@ public:
 		return pFolder;
 	}
 	/*获取指定目录下的特定文件*/
-	void getAllFiles(string path, vector<string>& files, string fileType);
+	void GetFiles(string path);
+	void getFiles(string path, vector<string>& files);
 	
 	/*打开目标文件夹*/
 	void OpenFolder(string choice);
 
 };
-//类外初始化，创建全局变量
-Folder* Folder::pFolder = new Folder;
+
 
 //文件管理的基类
 class FileControl

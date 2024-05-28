@@ -5,8 +5,11 @@
 #include<graphics.h>
 using namespace std;
 #include"UI.h"
+#include "FileController.h"
 
 static ExMessage mouse;
+//类外初始化，创建全局变量
+Folder* Folder::pFolder = new Folder;
 UI_File* UI_File::pUI_File = new UI_File;
 UI_Basic* UI_Basic::pUI_Basic = new UI_Basic;
 UI_Link* UI_Link::pUI_Link = new UI_Link;
@@ -16,12 +19,13 @@ int main()
 
 {
 	//setbkcolor(WHITE);
-	initgraph(900, 600);
+	//initgraph(900, 600);
 	cout << "Hello Git Bash!\n"<<endl;
 	cout << "Hello olden!\n" << endl;
 	cout << "Hello 123!" << endl; 
 	cout << "Hello  456!" << endl;
-	ChooseBox TestBox_1[3] = { ChooseBox(10,10,50,20,"Are"),ChooseBox(110,10,50,20,"You"),ChooseBox(210,10,50,20,"OK") };
+	/*按钮的测试部分*/
+	/*ChooseBox TestBox_1[3] = { ChooseBox(10,10,50,20,"Are"),ChooseBox(110,10,50,20,"You"),ChooseBox(210,10,50,20,"OK") };
 	ChooseBox TestBox_2[2] = { ChooseBox(10,110,50,20,"确认"),ChooseBox(110,110,50,20,"取消") };
 	int a[3] = { 0,1,2 };
 	switch (UI_Link::getInstance()->Link_ChooseBox(TestBox_1, a, 3, mouse))
@@ -30,7 +34,11 @@ int main()
 	case (1):circle(200, 200, 100); break;
 	case (2):circle(100, 100, 50); break;
 	default:break;
-	}
+	}*/
+	/*文件处理的测试部分*/
+	string path;
+	cin >> path;
+	Folder::getInstance()->GetFiles(path);
 	getchar();
 }
 
