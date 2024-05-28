@@ -14,12 +14,16 @@ int main()
 	initgraph(900, 600);
 	cout << "Hello Git Bash!\n"<<endl;
 	cout << "Hello olden!\n" << endl;
-	cout << "Hello 123!" << endl;
+	cout << "Hello 123!" << endl; 
 	cout << "Hello  456!" << endl;
-	ChooseBox TestBox(10,10,50,20,"hello");
+	ChooseBox TestBox_1[3] = { ChooseBox(10,10,50,20,"Are"),ChooseBox(110,10,50,20,"You"),ChooseBox(210,10,50,20,"OK") };
+	ChooseBox TestBox_2[2] = { ChooseBox(10,110,50,20,"确认"),ChooseBox(110,110,50,20,"取消") };
 	while (true)
 	{
-		TestBox.BoxPrint(mouse);
+		for (int i = 0; i < 3; i++)
+			TestBox_1[i].BoxPrint(mouse);
+		for (int j = 0; j < 2; j++)
+			TestBox_2[j].BoxPrint(mouse);
 	}
 	getchar();
 }
