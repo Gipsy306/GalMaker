@@ -1,6 +1,7 @@
 ﻿// GalMaker.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
+#include<DialogBox.h>
 #include <iostream>
 #include<graphics.h>
 using namespace std;
@@ -18,12 +19,21 @@ UI_Link* UI_Link::pUI_Link = new UI_Link;
 int main()
 
 {
-	//setbkcolor(WHITE);
+	/*对话框测试*/
 	//initgraph(900, 600);
+	//DialogBox test(0, 0, 899, 599, "D:\\BaiduNetdiskDownload\\PICTURES\\5.png", 90, 0, 0, 20, 99, WHITE, "黑体"，16，30，30，100，100，WHITE, "黑体", 20);
+	//test.draw("李易航：", "我的钢门比较松弛");
+	//system("pause"); // 暂停，等待用户按键
+	//closegraph(); // 关闭图形窗口
+
+	//return 0;
+
+
+	/*initgraph(900, 600);
 	cout << "Hello Git Bash!\n"<<endl;
 	cout << "Hello olden!\n" << endl;
 	cout << "Hello 123!" << endl; 
-	cout << "Hello  456!" << endl;
+	cout << "Hello  456!" << endl;*/
 	/*按钮的测试部分*/
 	/*ChooseBox TestBox_1[3] = { ChooseBox(10,10,50,20,"Are"),ChooseBox(110,10,50,20,"You"),ChooseBox(210,10,50,20,"OK") };
 	ChooseBox TestBox_2[2] = { ChooseBox(10,110,50,20,"确认"),ChooseBox(110,110,50,20,"取消") };
@@ -36,10 +46,10 @@ int main()
 	default:break;
 	}*/
 	/*文件处理的测试部分*/
-	string path;
+	/*string path;
 	cin >> path;
-	Folder::getInstance()->GetFiles(path);
-	getchar();
+	Folder::getInstance()->GetFiles(path);*/
+	/*getchar();*/
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
