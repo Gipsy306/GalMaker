@@ -25,9 +25,6 @@ void TxtPlay::TxtShowCase(const string& save_name,ExMessage mouse)
 		else {}
 		
 	}*/
-
-	
-	
 	while (true)
 	{
 		if (_kbhit())

@@ -129,12 +129,17 @@
   <ItemGroup>
     <ClCompile Include="FileController.cpp" />
     <ClCompile Include="GalMaker.cpp" />
+    <ClCompile Include="GalPlayer\DialogBox.cpp" />
+    <ClCompile Include="GalPlayer\test.cpp" />
+    <ClCompile Include="GalPlayer\TextBox.cpp" />
     <ClCompile Include="TxtMaker.cpp" />
     <ClCompile Include="TxtPlayer.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileController.h" />
+    <ClInclude Include="GalPlayer\DialogBox.h" />
+    <ClInclude Include="GalPlayer\TextBox.h" />
     <ClInclude Include="TxtMaker.h" />
     <ClInclude Include="TxtPlayer.h" />
     <ClInclude Include="UI.h" />

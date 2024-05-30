@@ -1,6 +1,7 @@
-#include<TextBox.h>
+#define _CRT_SECURE_NO_WARNINGS
+#include"TextBox.h"
 
-TextBox::TextBox(int box_x, int box_y, int box__x, int box__y, COLORREF TEXTCOLOR = WHITE, char* TYPEFACE = "黑体", int nHeight = 16) :
+TextBox::TextBox(int box_x, int box_y, int box__x, int box__y, COLORREF TEXTCOLOR = WHITE, char* TYPEFACE = (char*)"黑体", int nHeight = 16) :
 	box_x(box_x), box_y(box_y), box__x(box__x), box__y(box__y), TEXTCOLOR(TEXTCOLOR), TYPEFACE(TYPEFACE), nHeight(nHeight) {}//TextBox类的构造函数
 
 void TextBox::draw(char* content) {
@@ -11,6 +12,6 @@ void TextBox::draw(char* content) {
 	f.lfQuality = ANTIALIASED_QUALITY;		// 设置输出效果为抗锯齿  
 	settextstyle(&f);						// 设置字体样式
 	settextcolor(TEXTCOLOR);                // 设置字体颜色
-	RECT r = { box_x,box_y,box__x,box__y }      //设置文字框具体位置以及范围
-	drawtext(_T(content),&r,DT_LEFT| DT_WORDBREAK)；//在框内绘制文字
+	RECT r = { box_x,box_y,box__x,box__y };      //设置文字框具体位置以及范围
+	drawtext(_T(content), &r, DT_LEFT | DT_WORDBREAK);//在框内绘制文字
 }

@@ -1,7 +1,9 @@
-#include<DialogBox.h>
+#include"DialogBox.h"
 
-void putPictureAlpha(int dstx, int dsty, IMAGE* img, int alpha = 50) {//0~255,255表示不透明
-	COLORREF color = RGB(85, 85, 85),
+void putPictureAlpha(int dstx, int dsty, IMAGE* img, int alpha = 50) 
+{
+	//0~255,255表示不透明
+	COLORREF color = RGB(85, 85, 85);
 	DWORD* imgp = GetImageBuffer(img);
 	DWORD* bgimgp = GetImageBuffer();
 	int w, bw, h, i, j;
@@ -21,14 +23,14 @@ void putPictureAlpha(int dstx, int dsty, IMAGE* img, int alpha = 50) {//0~255,25
 				);
 }//绘制半透明图片的函数
 
-DialogBox::DialogBox(int box_x, int box_y, int box__x, int box__y, char* dialogBoxBackground,int alpha,
+dialogBox::dialogBox(int box_x, int box_y, int box__x, int box__y, char* dialogBoxBackground,int alpha,
 	int nameBox_x, int nameBox_y, int nameBox__x, int nameBox__y, COLORREF NAMECOLOR, char* NAMETYPEFACE, int nameNHeight,
 	int sentenceBox_x, int sentenceBox_y, int sentenceBox__x, int sentenceBox__y, COLORREF SENTENCECOLOR, char* SENENCETYPEFACE, int sentenceNHeight):
 	box_x(box_x),box_y(box_y),box__x(box__x),dialogBoxBackground(dialogBoxBackground),alpha(alpha),
 	nameBox(nameBox_x, nameBox_y, nameBox__x, nameBox__y, NAMECOLOR, NAMETYPEFACE, nameNHeight),
 	sentenceBox(sentenceBox_x, sentenceBox_y, sentenceBox__x, sentenceBox__y, SENTENCECOLOR, SENENCETYPEFACE, sentenceNHeight){}//DialogBox的构造函数
 
-void DialogBox::draw(char* name, char* sentence) {
+void dialogBox::draw(char* name, char* sentence) {
 	IMAGE img;
 	loadimage(&img, _T(dialogBoxBackground), box__x - box_x, box__y - box_y);
 	putPictureAlpha(box_x, box_y, &img, alpha);

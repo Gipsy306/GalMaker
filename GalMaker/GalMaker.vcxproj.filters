@@ -30,6 +30,15 @@
     <ClCompile Include="TxtPlayer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="GalPlayer\test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GalPlayer\TextBox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GalPlayer\DialogBox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TxtMaker.h">
@@ -42,6 +51,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="TxtPlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GalPlayer\DialogBox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GalPlayer\TextBox.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
