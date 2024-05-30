@@ -13,5 +13,6 @@ void TextBox::draw(char* content) {
 	settextstyle(&f);						// 设置字体样式
 	settextcolor(TEXTCOLOR);                // 设置字体颜色
 	RECT r = { box_x,box_y,box__x,box__y };      //设置文字框具体位置以及范围
+	setbkmode(TRANSPARENT);
 	drawtext(_T(content), &r, DT_LEFT | DT_WORDBREAK);//在框内绘制文字
 }
