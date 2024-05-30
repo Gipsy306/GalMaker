@@ -26,9 +26,9 @@ void putPictureAlpha(int dstx, int dsty, IMAGE* img, int alpha = 50)
 dialogBox::dialogBox(int box_x, int box_y, int box__x, int box__y, char* dialogBoxBackground,int alpha,
 	int nameBox_x, int nameBox_y, int nameBox__x, int nameBox__y, COLORREF NAMECOLOR, char* NAMETYPEFACE, int nameNHeight,
 	int sentenceBox_x, int sentenceBox_y, int sentenceBox__x, int sentenceBox__y, COLORREF SENTENCECOLOR, char* SENENCETYPEFACE, int sentenceNHeight):
-	box_x(box_x),box_y(box_y),box__x(box__x),dialogBoxBackground(dialogBoxBackground),alpha(alpha),
+	box_x(box_x),box_y(box_y),box__x(box__x),box__y(box__y),dialogBoxBackground(dialogBoxBackground),alpha(alpha),
 	nameBox(nameBox_x, nameBox_y, nameBox__x, nameBox__y, NAMECOLOR, NAMETYPEFACE, nameNHeight),
-	sentenceBox(sentenceBox_x, sentenceBox_y, sentenceBox__x, sentenceBox__y, SENTENCECOLOR, SENENCETYPEFACE, sentenceNHeight){}//DialogBox的构造函数
+	sentenceBox(sentenceBox_x, sentenceBox_y, sentenceBox__x, sentenceBox__y, SENTENCECOLOR, SENENCETYPEFACE, sentenceNHeight){}//dialogBox的构造函数
 
 void dialogBox::draw(char* name, char* sentence) {
 	IMAGE img;
