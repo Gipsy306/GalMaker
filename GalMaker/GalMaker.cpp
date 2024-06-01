@@ -22,14 +22,17 @@ FiletoTxt* FiletoTxt::pFiletoTxt = new FiletoTxt;
 TexttoTxt* TexttoTxt::pTexttoTxt = new TexttoTxt;
 TxtPlay* TxtPlay::pTxtPlay = new TxtPlay;
 Text_TxtPlay* Text_TxtPlay::pText_TxtPlay = new Text_TxtPlay;
+CG_TxtPlay* CG_TxtPlay::pCG_TxtPlay = new CG_TxtPlay;
+CGtoTxt* CGtoTxt::pCGtoTxt = new CGtoTxt;
 
-
-
-int main_GALMAKER()
+int main()
 
 {
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 3fb151c29ea63c9c1f0228c82637c2733a5526cc
 	/*对话框测试*/
 	//initgraph(900, 600);
 	//DialogBox test(0, 0, 899, 599, "D:\\BaiduNetdiskDownload\\PICTURES\\5.png", 90, 0, 0, 20, 99, WHITE, "黑体"，16，30，30，100，100，WHITE, "黑体", 20);
@@ -41,7 +44,7 @@ int main_GALMAKER()
 
 
 	/*initgraph(900, 600);
->>>>>>> 5bdf012435779b479b55ce066dbce0bf5dba00bc
+
 	cout << "Hello Git Bash!\n"<<endl;
 	cout << "Hello olden!\n" << endl;
 	cout << "Hello 123!" << endl; 
@@ -50,7 +53,6 @@ int main_GALMAKER()
 	/*按钮的测试部分*/
 
 	/*initgraph(900, 600);
->>>>>>> 5bdf012435779b479b55ce066dbce0bf5dba00bc
 	ChooseBox TestBox_1[3] = { ChooseBox(10,10,50,20,"Are"),ChooseBox(110,10,50,20,"You"),ChooseBox(210,10,50,20,"OK") };
 	ChooseBox TestBox_2[2] = { ChooseBox(10,110,50,20,"确认"),ChooseBox(110,110,50,20,"取消") };
 	int a[3] = { 0,1,2 };
@@ -64,6 +66,10 @@ int main_GALMAKER()
 	/*文件处理的测试部分*/
 	/*string path;
 	cin >> path;
+<<<<<<< HEAD
+	Folder::getInstance()->GetFiles(path);*/
+=======
+>>>>>>> 3fb151c29ea63c9c1f0228c82637c2733a5526cc
 	/*getchar();*/
 	/*文件转化的演示*/
 	/*Step 1: */
@@ -74,7 +80,11 @@ int main_GALMAKER()
 	}*/
 	/*Step 2: */
 	initgraph(900, 600);
-	TxtPlay::getInstacne()->TxtShowCase("test.txt", mouse);
+	//TxtPlay::getInstacne()->TxtShowCase("test.txt", mouse);
+	while (1)
+	{
+		FiletoTxt::getInstance()->ContentsAdd("projects/test01/test.txt", mouse);
+	}
 	return 0;
 }
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

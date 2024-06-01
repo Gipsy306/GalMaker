@@ -17,7 +17,7 @@ public:
 	{
 		return pFiletoTxt;
 	}
-	string TextSets(ExMessage mouse);
+	void ContentsAdd(const string& save_name,ExMessage mouse);
 	void FileIn(string type, const string& save_name);
 };
 
@@ -38,6 +38,21 @@ public:
 	string TextColor(ExMessage mouse);
 };
 
+//单例类CGtoTxt,继承于FiletoTxt，主要实现“剧本txt”中CG部分的编写
+class CGtoTxt :public FiletoTxt
+{
+private:
+	static CGtoTxt* pCGtoTxt;
+public:
+	static CGtoTxt* getInstacne()
+	{
+		return pCGtoTxt;
+	}
+	//设置CG配置的函数
+	string CGSets(ExMessage mouse);
+	/*设置CG播放形式的函数*/
+	string CGSpeed(ExMessage mouse);
+};
 
 string CharToStr(char*);
 
