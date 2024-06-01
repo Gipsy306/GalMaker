@@ -10,11 +10,11 @@ private:
 	int box_x, box_y;//文字框左上角位置
 	int box__x, box__y;//文字框右下角位置
 	COLORREF TEXTCOLOR ;//文字颜色
-	char* TYPEFACE ;//文字字体
+	const char* TYPEFACE ;//文字字体
 	int nHeight;//文字高度
 public:
-	TextBox(int box_x, int box_y, int box__x, int box__y, COLORREF TEXTCOLOR, char* TYPEFACE, int nHeight);//构造函数
-	void draw(char* content);//在文字框内以构造时设定的文字样式设置绘制文字内容content
+	TextBox(int box_x, int box_y, int box__x, int box__y, COLORREF TEXTCOLOR, const char* TYPEFACE, int nHeight);//构造函数
+	void draw(const char* content);//在文字框内以构造时设定的文字样式设置绘制文字内容content
 };
 
 #endif // !TEXTBOX_H
