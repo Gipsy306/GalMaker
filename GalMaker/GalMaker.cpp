@@ -28,6 +28,9 @@ Text_TxtPlay* Text_TxtPlay::pText_TxtPlay = new Text_TxtPlay;
 int main_GALMAKER()
 
 {
+<<<<<<< HEAD
+	initgraph(900, 600);
+=======
 
 	/*对话框测试*/
 	//initgraph(900, 600);
@@ -40,13 +43,17 @@ int main_GALMAKER()
 
 
 	/*initgraph(900, 600);
+>>>>>>> 5bdf012435779b479b55ce066dbce0bf5dba00bc
 	cout << "Hello Git Bash!\n"<<endl;
 	cout << "Hello olden!\n" << endl;
 	cout << "Hello 123!" << endl; 
 	cout << "Hello  456!" << endl;*/
 
 	/*按钮的测试部分*/
+<<<<<<< HEAD
+=======
 	/*initgraph(900, 600);
+>>>>>>> 5bdf012435779b479b55ce066dbce0bf5dba00bc
 	ChooseBox TestBox_1[3] = { ChooseBox(10,10,50,20,"Are"),ChooseBox(110,10,50,20,"You"),ChooseBox(210,10,50,20,"OK") };
 	ChooseBox TestBox_2[2] = { ChooseBox(10,110,50,20,"确认"),ChooseBox(110,110,50,20,"取消") };
 	int a[3] = { 0,1,2 };
@@ -56,10 +63,16 @@ int main_GALMAKER()
 	case (1):circle(200, 200, 100); break;
 	case (2):circle(100, 100, 50); break;
 	default:break;
-	}*/
+	}
 	/*文件处理的测试部分*/
 	/*string path;
 	cin >> path;
+<<<<<<< HEAD
+	Folder::getInstance()->GetFiles(path);*/
+	getchar();
+}
+=======
+>>>>>>> 5bdf012435779b479b55ce066dbce0bf5dba00bc
 
 	Folder::getInstance()->GetFiles(path);*/
 	/*getchar();*/
