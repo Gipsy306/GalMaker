@@ -15,8 +15,8 @@ void FiletoTxt::ContentsAdd(const string& save_name,ExMessage mouse)
 	int type[6] = { 0,1,2,3,4,5 };
 	switch (UI_Link::getInstance()->Link_ChooseBox(AddChoose, type, 6, mouse))
 	{
-	case(0):cleardevice(); FileIn(TexttoTxt::getInstance()->TextSets(mouse),save_name); break;
-	case(1):cleardevice(); FileIn(CGtoTxt::getInstacne()->CGSets(mouse),save_name); break;
+	case(0):cleardevice(); FileIn(TexttoTxt::getInstance()->TextSets(mouse),save_name,mouse); break;
+	case(1):cleardevice(); FileIn(CGtoTxt::getInstacne()->CGSets(mouse),save_name,mouse); break;
 	case(2):cleardevice();; break;
 	case(3):cleardevice();; break;
 	case(4):cleardevice();; break;
@@ -26,7 +26,7 @@ void FiletoTxt::ContentsAdd(const string& save_name,ExMessage mouse)
 }
 
 //将文件的设置和内容存入“剧本.txt”文件中
-void FiletoTxt::FileIn(string sets, const string& save_name)
+void FiletoTxt::FileIn(string sets, const string& save_name,ExMessage mouse)
 {
 	if (sets.substr(0, 2) == "01")	//验证sets的前两位以判断其类型
 	{
@@ -45,7 +45,15 @@ void FiletoTxt::FileIn(string sets, const string& save_name)
 	else if(sets.substr(0,2)=="02")
 	{
 		ofstream out(save_name, ios::out | ios::app);
-
+		string temp = Folder::getInstance()->GetFiles("res/img", mouse);
+		if (out.is_open())
+		{
+			//存入CG的设置
+			out << sets << endl;
+			out << temp << endl;
+		}
+		else { cout << "存储失败" << endl; }
+		cleardevice();
 	}
 }
 
@@ -114,7 +122,10 @@ string CGtoTxt::CGSpeed(ExMessage mouse)
 	int speed[3] = { 1,2,3 };
 	switch (UI_Link::getInstance()->Link_ChooseBox(CGSpeedChoose, speed, 3, mouse))
 	{
-
+	case(1):speed_CG = "01"; break;
+	case(2):speed_CG = "02"; break;
+	case(3):speed_CG = "03"; break;
+	default:break;
 	}
 	return speed_CG;
 }

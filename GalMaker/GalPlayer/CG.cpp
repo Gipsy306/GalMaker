@@ -1,13 +1,15 @@
 #include"CG.h"
 
-
 void cg::setCGPicture(const char* cgpicture)
 {
     cgPicture = (char*)cgpicture;
 }
 
-void cg::draw() {
-	
+void cg::draw() 
+{
+    IMAGE img;
+    loadimage(&img, _T(cgPicture), getwidth(), getheight());
+    putimage(0, 0, &img);
 }
 
 void cg::CGdrawGradually() 

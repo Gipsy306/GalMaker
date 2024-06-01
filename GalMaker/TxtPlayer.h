@@ -44,7 +44,7 @@ public:
 		return pCG_TxtPlay;
 	}
 	void Set_CG_Picture(const char* cg_picture);
-	void CGShowcase(string);
+	void CGShowcase(string sets,string contents);
 	void CGDraw_Immediately();
 	void CGDraw_Gradually();
 };

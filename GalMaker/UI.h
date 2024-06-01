@@ -44,7 +44,7 @@ public:
 /*选择框的构造函数*/
 	ChooseBox(int xx,int yy,int ll,int ww,const char* title,int type):box_x(xx),box_y(yy),length(ll),width(ww),box_title(title),box_type(type){}
 	ChooseBox(int xx, int yy, int ll, int ww, const char* title) :box_x(xx), box_y(yy), length(ll), width(ww), box_title(title),box_type(DEFAULT) {}
-
+	ChooseBox(){}
 /*选择框的函数*/
 	int BoxPrint(ExMessage mouse);
 	/*绘制框的两种形态的函数*/

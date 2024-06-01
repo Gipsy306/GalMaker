@@ -29,7 +29,7 @@ public:
 		return pFolder;
 	}
 	/*获取指定目录下的特定文件*/
-	void GetFiles(string path,ExMessage mouse);
+	string GetFiles(string path,ExMessage mouse);
 	void getFiles(string path, vector<string>& files);
 	
 	/*打开目标文件夹*/

@@ -1,2 +1,12 @@
 01000004
 大家好
+0201
+res/img\123456.jpg
+0201
+res/img\MAP001.png
+01000001
+的撒产生的DVD是 
+0202
+res/img\MAP001.png
+0202
+res/img\56789.jpg
