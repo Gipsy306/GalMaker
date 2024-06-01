@@ -15,7 +15,7 @@ void dialogBox::draw(const char* name, const char* sentence) {
 	sentenceBox.drawGradually(sentence);
 }//绘制姓名为name，语句为sentence的对话框画面
 
-void dialogBox::emerge() {
+void dialogBox::emerge(const char* name, const char* sentence) {
     IMAGE img;
     loadimage(&img, _T(dialogBoxBackground), box__x - box_x, box__y - box_y);
 
@@ -26,7 +26,7 @@ void dialogBox::emerge() {
     int Alpha = 5;
 
     //在510毫秒内渐变显示背景图，并检测用户输入
-    while ((GetTickCount() - startTime < timeout)&&(Alpha<=alpha)) {
+    while ((GetTickCount() - startTime < timeout)&&(Alpha<=alpha/5)) {
         putPictureAlpha(box_x, box_y, &img, transparentColor, Alpha);
         Alpha += 5; //增加背景图不透明度
 
@@ -46,6 +46,8 @@ void dialogBox::emerge() {
 
         //暂停10毫秒
         Sleep(10);
+        nameBox.draw(name);
+        sentenceBox.drawGradually(sentence);
     }
     putPictureAlpha(box_x, box_y, &img, transparentColor, alpha);//保证最终绘制出透明度为设定值的背景图
 }
