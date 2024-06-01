@@ -15,6 +15,42 @@
     <ClCompile Include="MainInterface.cpp" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <ClCompile Include="GalMaker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TxtMaker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FileController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MainInterface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TxtMaker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FileController.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MainInterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="文件转txt编码规则.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+=======
     <ClInclude Include="FileController.h" />
     <ClInclude Include="GalPlayer\CG.h" />
     <ClInclude Include="GalPlayer\DialogBox.h" />
@@ -28,5 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="文件转txt编码规则.txt" />
+>>>>>>> 3a3ae59a9516081861a67019d4b5eece61a14bd4
   </ItemGroup>
 </Project>

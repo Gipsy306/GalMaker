@@ -23,8 +23,14 @@ void Folder::GetFiles(string path,ExMessage mouse)
 		type[i] = i;
 	}
 	int link = UI_Link::getInstance()->Link_ChooseBox(filesChoose, type, size, mouse);
+<<<<<<< HEAD
 	
+=======
+	for (int i = 0; i < size; i++)
+	{
+>>>>>>> 23442b55e6858aa247d7c48fe107fdb4e54ff14b
 
+	}
 }
 
 //文件夹处理函数：

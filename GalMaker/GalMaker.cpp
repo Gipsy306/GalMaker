@@ -25,7 +25,11 @@ Text_TxtPlay* Text_TxtPlay::pText_TxtPlay = new Text_TxtPlay;
 CG_TxtPlay* CG_TxtPlay::pCG_TxtPlay = new CG_TxtPlay;
 CGtoTxt* CGtoTxt::pCGtoTxt = new CGtoTxt;
 
+<<<<<<< HEAD
 int main___()
+=======
+int main114514()
+>>>>>>> 23442b55e6858aa247d7c48fe107fdb4e54ff14b
 
 {
 
@@ -55,7 +59,7 @@ int main___()
 	switch (UI_Link::getInstance()->Link_ChooseBox(TestBox_1, a, 3, mouse))
 	{
 	case (0):cleardevice(); break;
-	case (1):circle(200, 200, 100); break;
+	case (1):circle(200, 200, 100); beak;
 	case (2):circle(100, 100, 50); break;
 	default:break;
 	}
