@@ -10,7 +10,7 @@ dialogBox::dialogBox(int box_x, int box_y, int box__x, int box__y, const char* d
 void dialogBox::draw(const char* name, const char* sentence) {
 	IMAGE img;
 	loadimage(&img, _T(dialogBoxBackground), box__x - box_x, box__y - box_y);
-	putPictureAlpha(box_x, box_y, &img, transparentColor,alpha);
+    putPictureAlpha(box_x, box_y, &img, transparentColor, alpha);
 	nameBox.draw(name);
 	sentenceBox.drawGradually(sentence);
 }//绘制姓名为name，语句为sentence的对话框画面
