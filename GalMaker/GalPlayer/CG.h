@@ -1,7 +1,7 @@
 //CG类，用于CG（或BG）的绘制
 #pragma once
-#ifndef DRAWCG_H
-#define DRAWCG_H
+#ifndef CG_H
+#define CG_H
 #include<graphics.h>
 #include"PutPictuerAlpha.h"
 

@@ -1,6 +1,6 @@
-#include"DrawCG.h"
+#include"CG.h"
 
-cg::cg(const char* cgPicture)cgPicture(cgPicture){}
+cg::cg(const char* cgPicture):cgPicture(cgPicture){}
 
 void cg::draw() {
 	IMAGE img;

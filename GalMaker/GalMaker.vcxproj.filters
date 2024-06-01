@@ -39,6 +39,15 @@
     <ClCompile Include="GalPlayer\DialogBox.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="GalPlayer\CG.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GalPlayer\PutPictuerAlpha.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GalPlayer\TachieBox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TxtMaker.h">
@@ -57,6 +66,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="GalPlayer\TextBox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GalPlayer\CG.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GalPlayer\PutPictuerAlpha.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GalPlayer\TachieBox.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
