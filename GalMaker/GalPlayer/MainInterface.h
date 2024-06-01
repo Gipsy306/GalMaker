@@ -7,11 +7,10 @@
 
 //实现对bg的导入完成第一步的绘画和修改
 class background {
-private:int x, y;
-	    
+private:int x, y;	    
 	     
 public:	  
-	  void setgraph(int x,int y);
+	  void setgraph(int x,int y,IMAGE);
 	  void changegraph();
 	  void particles();
 };

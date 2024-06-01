@@ -129,25 +129,14 @@
   <ItemGroup>
     <ClCompile Include="FileController.cpp" />
     <ClCompile Include="GalMaker.cpp" />
-    <ClCompile Include="GalPlayer\CG.cpp" />
-    <ClCompile Include="GalPlayer\DialogBox.cpp" />
-    <ClCompile Include="GalPlayer\PutPictuerAlpha.cpp" />
-    <ClCompile Include="GalPlayer\TachieBox.cpp" />
-    <ClCompile Include="GalPlayer\test.cpp" />
-    <ClCompile Include="GalPlayer\TextBox.cpp" />
+    <ClCompile Include="MainInterface.cpp" />
     <ClCompile Include="TxtMaker.cpp" />
-    <ClCompile Include="TxtPlayer.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileController.h" />
-    <ClInclude Include="GalPlayer\CG.h" />
-    <ClInclude Include="GalPlayer\DialogBox.h" />
-    <ClInclude Include="GalPlayer\PutPictuerAlpha.h" />
-    <ClInclude Include="GalPlayer\TachieBox.h" />
-    <ClInclude Include="GalPlayer\TextBox.h" />
+    <ClInclude Include="MainInterface.h" />
     <ClInclude Include="TxtMaker.h" />
-    <ClInclude Include="TxtPlayer.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup>
