@@ -1,11 +1,16 @@
 ﻿// GalMaker.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
+
 #include <iostream>
 #include<graphics.h>
 using namespace std;
+#include"GalPlayer/DialogBox.h"
+#include"GalPlayer/DialogBox.h"
 #include"UI.h"
 #include "FileController.h"
+#include"TxtMaker.h"
+#include"TxtPlayer.h"
 
 static ExMessage mouse;
 //类外初始化，创建全局变量
@@ -13,17 +18,42 @@ Folder* Folder::pFolder = new Folder;
 UI_File* UI_File::pUI_File = new UI_File;
 UI_Basic* UI_Basic::pUI_Basic = new UI_Basic;
 UI_Link* UI_Link::pUI_Link = new UI_Link;
+FiletoTxt* FiletoTxt::pFiletoTxt = new FiletoTxt;
+TexttoTxt* TexttoTxt::pTexttoTxt = new TexttoTxt;
+TxtPlay* TxtPlay::pTxtPlay = new TxtPlay;
+Text_TxtPlay* Text_TxtPlay::pText_TxtPlay = new Text_TxtPlay;
 
 
-int main()
+
+int main_GALMAKER()
 
 {
+<<<<<<< HEAD
 	initgraph(900, 600);
+=======
+
+	/*对话框测试*/
+	//initgraph(900, 600);
+	//DialogBox test(0, 0, 899, 599, "D:\\BaiduNetdiskDownload\\PICTURES\\5.png", 90, 0, 0, 20, 99, WHITE, "黑体"，16，30，30，100，100，WHITE, "黑体", 20);
+	//test.draw("李易航：", "我的钢门比较松弛");
+	//system("pause"); // 暂停，等待用户按键
+	//closegraph(); // 关闭图形窗口
+
+	//return 0;
+
+
+	/*initgraph(900, 600);
+>>>>>>> 5bdf012435779b479b55ce066dbce0bf5dba00bc
 	cout << "Hello Git Bash!\n"<<endl;
 	cout << "Hello olden!\n" << endl;
 	cout << "Hello 123!" << endl; 
-	cout << "Hello  456!" << endl;
+	cout << "Hello  456!" << endl;*/
+
 	/*按钮的测试部分*/
+<<<<<<< HEAD
+=======
+	/*initgraph(900, 600);
+>>>>>>> 5bdf012435779b479b55ce066dbce0bf5dba00bc
 	ChooseBox TestBox_1[3] = { ChooseBox(10,10,50,20,"Are"),ChooseBox(110,10,50,20,"You"),ChooseBox(210,10,50,20,"OK") };
 	ChooseBox TestBox_2[2] = { ChooseBox(10,110,50,20,"确认"),ChooseBox(110,110,50,20,"取消") };
 	int a[3] = { 0,1,2 };
@@ -37,10 +67,27 @@ int main()
 	/*文件处理的测试部分*/
 	/*string path;
 	cin >> path;
+<<<<<<< HEAD
 	Folder::getInstance()->GetFiles(path);*/
 	getchar();
 }
+=======
+>>>>>>> 5bdf012435779b479b55ce066dbce0bf5dba00bc
 
+	Folder::getInstance()->GetFiles(path);*/
+	/*getchar();*/
+	/*文件转化的演示*/
+	/*Step 1: */
+	/*initgraph(900, 600);
+	while (true)
+	{
+		FiletoTxt::getInstance()->FileIn(TexttoTxt::getInstance()->TextSets(mouse), "test.txt");
+	}*/
+	/*Step 2: */
+	initgraph(900, 600);
+	TxtPlay::getInstacne()->TxtShowCase("test.txt", mouse);
+	return 0;
+}
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
 
