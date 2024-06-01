@@ -25,7 +25,7 @@ Text_TxtPlay* Text_TxtPlay::pText_TxtPlay = new Text_TxtPlay;
 
 
 
-int main_GalMakercpp()
+int main_GALMAKER()
 
 {
 

@@ -4,14 +4,23 @@
 #define CG_H
 #include<graphics.h>
 #include"PutPictuerAlpha.h"
+#include<conio.h>
 
-class cg {
+//单例类
+class cg 
+{
 private:
-	const char* cgPicture;
+	static cg* pcg;
+	char* cgPicture;
 public:
-	cg(const char* cgPicture);//构造函数
-	void draw();//瞬间绘制CG（或BG）的函数
-	void drawGradually();//渐变绘制出CG（或BG）的函数
+	static cg* getInstacne()
+	{
+		return pcg;
+	}
+
+	void setCGPicture(const char* cgpicture);		//存储CG图片的函数
+	void draw();				//瞬间绘制CG（或BG）的函数
+	void CGdrawGradually();		//渐变绘制出CG（或BG）的函数
 };
 
-#endif // !DRAWCG_H
+#endif // !CG_H

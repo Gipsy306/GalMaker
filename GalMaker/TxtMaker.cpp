@@ -7,6 +7,7 @@ string TexttoTxt::TextSets(ExMessage mouse)
 	if (TextColor(mouse)!="0")
 	{
 		sets_text += TextColor(mouse);		//将颜色写入总的Sets之中
+
 		return sets_text;
 	}
 	else

@@ -6,25 +6,6 @@ void TxtPlay::TxtShowCase(const string& save_name,ExMessage mouse)
 	string setsline;
 	ifstream in(save_name);
 	int count = 1;
-	/*while (getline(in, linereader))
-	{
-
-		if (mouse.vkcode == VK_RETURN)
-		{
-			if (count % 2 == 0)
-			{
-				
-			}
-			else
-			{
-				setsline_saver = linereader;
-			}
-			count++;
-		}
-		else if (mouse.vkcode == VK_ESCAPE)exit(0);
-		else {}
-		
-	}*/
 	while (true)
 	{
 		if (_kbhit())
@@ -36,7 +17,7 @@ void TxtPlay::TxtShowCase(const string& save_name,ExMessage mouse)
 				getline(in, linereader);
 				TypeSort(setsline, linereader);
 			}
-			else if (input == 27)
+			else if (input == 27)		//ESC对应的ASCII值
 			{
 				exit(0);
 			}
@@ -50,6 +31,8 @@ void TxtPlay::TypeSort(string sets, string contents)
 	switch (stoi(sets.substr(0,2)))
 	{
 	case(1):Text_TxtPlay::getInstance()->TextShowcase(sets, contents); break;
+
+
 	default:break;
 	}
 }

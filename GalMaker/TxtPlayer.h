@@ -32,4 +32,8 @@ public:
 	COLORREF TextColor(string sets);
 };
 
+class CG_TxtPlay
+{
+
+};
 #endif // !TXTPLAYER_H
