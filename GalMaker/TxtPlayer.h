@@ -4,6 +4,7 @@
 #include<fstream>
 #include<conio.h>
 #include"UI.h"
+#include"GalPlayer/PutPictuerAlpha.h"
 
 
 class TxtPlay
@@ -34,6 +35,17 @@ public:
 
 class CG_TxtPlay
 {
-
+private:
+	static CG_TxtPlay*  pCG_TxtPlay;
+	char* CG_Picture;
+public:
+	static CG_TxtPlay* getInstacnce()
+	{
+		return pCG_TxtPlay;
+	}
+	void Set_CG_Picture(const char* cg_picture);
+	void CGShowcase(string);
+	void CGDraw_Immediately();
+	void CGDraw_Gradually();
 };
 #endif // !TXTPLAYER_H
