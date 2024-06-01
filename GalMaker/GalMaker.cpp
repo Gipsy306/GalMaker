@@ -28,6 +28,11 @@ CGtoTxt* CGtoTxt::pCGtoTxt = new CGtoTxt;
 int main()
 
 {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3fb151c29ea63c9c1f0228c82637c2733a5526cc
 	/*对话框测试*/
 	//initgraph(900, 600);
 	//DialogBox test(0, 0, 899, 599, "D:\\BaiduNetdiskDownload\\PICTURES\\5.png", 90, 0, 0, 20, 99, WHITE, "黑体"，16，30，30，100，100，WHITE, "黑体", 20);
@@ -61,7 +66,10 @@ int main()
 	/*文件处理的测试部分*/
 	/*string path;
 	cin >> path;
+<<<<<<< HEAD
 	Folder::getInstance()->GetFiles(path);*/
+=======
+>>>>>>> 3fb151c29ea63c9c1f0228c82637c2733a5526cc
 	/*getchar();*/
 	/*文件转化的演示*/
 	/*Step 1: */

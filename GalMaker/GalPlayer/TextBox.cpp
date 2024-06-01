@@ -16,3 +16,31 @@ void TextBox::draw(const char* content) {
 	setbkmode(TRANSPARENT);
 	drawtext(_T(content), &r, DT_LEFT | DT_WORDBREAK);//在框内绘制文字
 }
+
+void TextBox::drawGradually(const char* content) {
+	std::string temp = (std::string)content;
+    int i = 0;
+    while (i<=temp.length()) {
+        draw((temp.substr(0, i)).c_str());
+        i++;
+
+        //检测用户输入
+        //若按enter键
+        if (_kbhit() && _getch() == '\r') {
+            draw(content);
+            break;
+        }
+
+        //如果检测到鼠标左键点击
+        ExMessage msg;
+        if (peekmessage(&msg, EM_MOUSE) && msg.message == WM_LBUTTONDOWN) {
+            draw(content);
+            break;
+        }
+
+        //暂停30毫秒
+        Sleep(30);
+    }
+    draw(content);
+
+}
