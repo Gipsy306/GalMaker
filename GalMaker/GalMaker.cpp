@@ -25,14 +25,10 @@ Text_TxtPlay* Text_TxtPlay::pText_TxtPlay = new Text_TxtPlay;
 CG_TxtPlay* CG_TxtPlay::pCG_TxtPlay = new CG_TxtPlay;
 CGtoTxt* CGtoTxt::pCGtoTxt = new CGtoTxt;
 
-int main()
+int main114514()
 
 {
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 3fb151c29ea63c9c1f0228c82637c2733a5526cc
 	/*对话框测试*/
 	//initgraph(900, 600);
 	//DialogBox test(0, 0, 899, 599, "D:\\BaiduNetdiskDownload\\PICTURES\\5.png", 90, 0, 0, 20, 99, WHITE, "黑体"，16，30，30，100，100，WHITE, "黑体", 20);
@@ -59,17 +55,14 @@ int main()
 	switch (UI_Link::getInstance()->Link_ChooseBox(TestBox_1, a, 3, mouse))
 	{
 	case (0):cleardevice(); break;
-	case (1):circle(200, 200, 100); break;
+	case (1):circle(200, 200, 100); beak;
 	case (2):circle(100, 100, 50); break;
 	default:break;
 	}
 	/*文件处理的测试部分*/
 	/*string path;
 	cin >> path;
-<<<<<<< HEAD
-	Folder::getInstance()->GetFiles(path);*/
-=======
->>>>>>> 3fb151c29ea63c9c1f0228c82637c2733a5526cc
+
 	/*getchar();*/
 	/*文件转化的演示*/
 	/*Step 1: */

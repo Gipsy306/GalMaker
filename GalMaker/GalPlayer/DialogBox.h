@@ -22,7 +22,7 @@ public:
 		int nameBox_x, int nameBox_y, int nameBox__x, int nameBox__y, COLORREF NAMECOLOR, const char* NAMETYPEFACE, int nameNHeight,
 		int sentenceBox_x, int sentenceBox_y, int sentenceBox__x, int sentenceBox__y, COLORREF SENTENCECOLOR, const char* SENENCETYPEFACE, int sentenceNHeight);//构造函数
 	void draw(const char* name, const char* sentence);//显示一句对话
-	void emerge();//将对话框浮现
+	//void emerge();//将对话框浮现
 };
 
 #endif // !DIALOGBOX_H

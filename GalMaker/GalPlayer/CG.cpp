@@ -1,9 +1,6 @@
 #include"CG.h"
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 3fb151c29ea63c9c1f0228c82637c2733a5526cc
 void cg::setCGPicture(const char* cgpicture)
 {
     cgPicture = (char*)cgpicture;
