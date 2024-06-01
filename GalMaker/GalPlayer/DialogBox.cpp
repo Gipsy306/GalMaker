@@ -18,6 +18,7 @@ void dialogBox::draw(const char* name, const char* sentence) {
 	sentenceBox.drawGradually(sentence);
 }//绘制姓名为name，语句为sentence的对话框画面
 
+<<<<<<< HEAD
 //void dialogBox::emerge() {
 //    IMAGE img;
 //    loadimage(&img, _T(dialogBoxBackground), box__x - box_x, box__y - box_y);
@@ -52,3 +53,41 @@ void dialogBox::draw(const char* name, const char* sentence) {
 //    }
 //    putPictureAlpha(box_x, box_y, &img, transparentColor, alpha);//保证最终绘制出透明度为设定值的背景图
 //}
+=======
+void dialogBox::emerge(const char* name, const char* sentence) {
+    IMAGE img;
+    loadimage(&img, _T(dialogBoxBackground), box__x - box_x, box__y - box_y);
+
+    //设置超时时间为510毫秒
+    DWORD startTime = GetTickCount();
+    DWORD timeout = 510;
+
+    int Alpha = 5;
+
+    //在510毫秒内渐变显示背景图，并检测用户输入
+    while ((GetTickCount() - startTime < timeout)&&(Alpha<=alpha/5)) {
+        putPictureAlpha(box_x, box_y, &img, transparentColor, Alpha);
+        Alpha += 5; //增加背景图不透明度
+
+        //检测用户输入
+        //若按enter键
+        if (_kbhit() && _getch() == '\r') {
+            putPictureAlpha(box_x, box_y, &img, transparentColor, alpha);
+            break;
+        }
+
+        //如果检测到鼠标左键点击
+        ExMessage msg;
+        if (peekmessage(&msg, EM_MOUSE) && msg.message == WM_LBUTTONDOWN) {
+            putPictureAlpha(box_x, box_y, &img, transparentColor, alpha);
+            break;
+        }
+
+        //暂停10毫秒
+        Sleep(10);
+        nameBox.draw(name);
+        sentenceBox.drawGradually(sentence);
+    }
+    putPictureAlpha(box_x, box_y, &img, transparentColor, alpha);//保证最终绘制出透明度为设定值的背景图
+}
+>>>>>>> 1e900483244df9d217deeebfce636023cacafb1c
