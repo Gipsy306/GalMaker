@@ -1,15 +1,31 @@
 #include "FileController.h"
 
-void Folder::GetFiles(string path)
+
+
+void Folder::GetFiles(string path,ExMessage mouse)
 {
 	vector<string> files;
 	getFiles(path, files);
-	char str[30];
 	int size = files.size();
 	int nullSize = 0;
+	static ChooseBox* filesChoose;
 	for (int i = 0; i < size; i++)
 	{
-		cout << files[i].c_str() << endl;
+		filesChoose[i].box_title = files[i].c_str();
+		filesChoose[i].box_x = 0;
+		filesChoose[i].box_y = 50 * i;
+		filesChoose[i].length = 500;
+		filesChoose[i].width = 50;
+	}
+	static int* type;
+	for (int i = 0; i < size; i++)
+	{
+		type[i] = i;
+	}
+	int link = UI_Link::getInstance()->Link_ChooseBox(filesChoose, type, size, mouse);
+	for (int i = 0; i < size; i++)
+	{
+
 	}
 }
 

@@ -5,6 +5,7 @@
 #include"TextBox.h"
 #include"PutPictuerAlpha.h"
 #include<graphics.h>
+#include<conio.h>
 using namespace std;
 
 class dialogBox
@@ -20,7 +21,12 @@ public:
 	dialogBox(int box_x, int box_y, int box__x, int box__y, const char* dialogBoxBackground, COLORREF transparentColor,int alpha,
 		int nameBox_x, int nameBox_y, int nameBox__x, int nameBox__y, COLORREF NAMECOLOR, const char* NAMETYPEFACE, int nameNHeight,
 		int sentenceBox_x, int sentenceBox_y, int sentenceBox__x, int sentenceBox__y, COLORREF SENTENCECOLOR, const char* SENENCETYPEFACE, int sentenceNHeight);//构造函数
-	void draw(const char* name, const char* sentence);
+	void draw(const char* name, const char* sentence);//显示一句对话
+<<<<<<< HEAD
+	//void emerge();//将对话框浮现
+=======
+	void emerge(const char* name, const char* sentence);//将对话框浮现
+>>>>>>> 1e900483244df9d217deeebfce636023cacafb1c
 };
 
 #endif // !DIALOGBOX_H

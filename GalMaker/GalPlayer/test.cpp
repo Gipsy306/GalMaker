@@ -1,32 +1,43 @@
 #include"DialogBox.h"
 #include"CG.h"
-<<<<<<< HEAD
-=======
+#include"TachieBox.h"
+
 
 cg* cg::pcg = new cg;
->>>>>>> 32fd40f237196192c5c54088ab1e06d5dcb33405
-
 int main() {
-	initgraph(900, 600);
-	/*setfillcolor(RED);
-	solidcircle(100, 100, 200);
-	dialogBox test(0, 0, 899, 599, "D:\\BaiduNetdiskDownload\\PICTURES\\5.png", RGB(255, 255, 255),100, 0, 0, 20, 99, WHITE, "黑体", 16, 30, 30, 500, 100, WHITE, "黑体", 20);
-	test.draw("李易航：", "我的钢门比较松弛");*/
+	initgraph(1600, 900);
 <<<<<<< HEAD
-	
-	cg test("D:\\BaiduNetdiskDownload\\PICTURES\\5.png");
-	test.drawGradually();
-
+	dialogBox test(0, 759, 1599, 899, "res/img/MAP001.png", RGB(0, 0, 0), 90, 19, 969, 1599, 999, BLACK, "黑体", 25, 959, 1009, 1599, 899, BLACK, "黑体", 25);
 =======
-	cg::getInstacne()->setCGPicture("res/img/MAP001.png");
-	while (1)
-	{
-		cg::getInstacne()->CGdrawGradually();
-		Sleep(2000);
-		cleardevice();
-	}
+	dialogBox test(0, 539, 1599, 899, "D:\\test\\纯色对话框.png", RGB(0, 0, 0), 90, 19, 549, 1599, 579, BLACK, "黑体", 25, 19, 589, 1599, 899, BLACK, "黑体", 25);
+>>>>>>> 1e900483244df9d217deeebfce636023cacafb1c
+	tachieBox ttest(149, 179, 649, 899, 0xfafafa);
+	tachieBox tttest(549, 179, 1049, 899, 0xfafafa);
+	cg::getInstacne()->setCGPicture("res/img/123456.jpg");
 	cg::getInstacne()->CGdrawGradually();
->>>>>>> 32fd40f237196192c5c54088ab1e06d5dcb33405
+
+	system("pause");
+
+	cleardevice();
+	cg::getInstacne()->setCGPicture("res/img/123456.jpg");
+	cg::getInstacne()->CGdrawGradually();
+<<<<<<< HEAD
+	ttest.drawGradually("res/img/123456.jpg");
+	//test.emerge();
+	test.draw("GM娘：","这里是一段测试用例。喵。");
+=======
+	ttest.drawGradually("D:\\test\\立绘测试.jpg");
+	test.emerge("GM娘：", "这里是一段测试用例。喵。");
+>>>>>>> 1e900483244df9d217deeebfce636023cacafb1c
+			
+	system("pause");
+
+	cg::getInstacne()->draw();
+	ttest.draw("res/img/123456.jpg");
+	tttest.draw("res/img/123456.jpg");
+	test.draw("GM娘：", "然后这是立绘切换测试。喵。");
+	
+
 	system("pause"); // 暂停，等待用户按键
 	closegraph(); // 关闭图形窗口
 
