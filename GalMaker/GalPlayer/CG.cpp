@@ -5,8 +5,12 @@ void cg::setCGPicture(const char* cgpicture)
     cgPicture = (char*)cgpicture;
 }
 
+<<<<<<< HEAD
 void cg::draw() 
 {
+=======
+void cg::draw() {
+>>>>>>> 731f7c4d65156685edb0c53cc2be1d64d5dc4738
     IMAGE img;
     loadimage(&img, _T(cgPicture), getwidth(), getheight());
     putimage(0, 0, &img);

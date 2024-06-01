@@ -25,7 +25,15 @@ Text_TxtPlay* Text_TxtPlay::pText_TxtPlay = new Text_TxtPlay;
 CG_TxtPlay* CG_TxtPlay::pCG_TxtPlay = new CG_TxtPlay;
 CGtoTxt* CGtoTxt::pCGtoTxt = new CGtoTxt;
 
+<<<<<<< HEAD
 int main()
+=======
+<<<<<<< HEAD
+int main___()
+=======
+int main114514()
+>>>>>>> 23442b55e6858aa247d7c48fe107fdb4e54ff14b
+>>>>>>> 731f7c4d65156685edb0c53cc2be1d64d5dc4738
 
 {
 

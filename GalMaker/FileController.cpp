@@ -26,8 +26,12 @@ string Folder::GetFiles(string path,ExMessage mouse)
 	}
 	initgraph(1200, 900);
 	int link = UI_Link::getInstance()->Link_ChooseBox(filesChoose, type, size, mouse);
+<<<<<<< HEAD
+	
+=======
 	for (int i = 0; i < size; i++)
 	{
+<<<<<<< HEAD
 		if (link == i)
 		{
 			delete[] filesChoose;
@@ -35,6 +39,10 @@ string Folder::GetFiles(string path,ExMessage mouse)
 			return files[i];
 		}
 		else{}
+=======
+>>>>>>> 23442b55e6858aa247d7c48fe107fdb4e54ff14b
+
+>>>>>>> 731f7c4d65156685edb0c53cc2be1d64d5dc4738
 	}
 	
 }
