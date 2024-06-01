@@ -18,14 +18,13 @@ UI_Link* UI_Link::pUI_Link = new UI_Link;
 int main()
 
 {
-	//setbkcolor(WHITE);
-	//initgraph(900, 600);
+	initgraph(900, 600);
 	cout << "Hello Git Bash!\n"<<endl;
 	cout << "Hello olden!\n" << endl;
 	cout << "Hello 123!" << endl; 
 	cout << "Hello  456!" << endl;
 	/*按钮的测试部分*/
-	/*ChooseBox TestBox_1[3] = { ChooseBox(10,10,50,20,"Are"),ChooseBox(110,10,50,20,"You"),ChooseBox(210,10,50,20,"OK") };
+	ChooseBox TestBox_1[3] = { ChooseBox(10,10,50,20,"Are"),ChooseBox(110,10,50,20,"You"),ChooseBox(210,10,50,20,"OK") };
 	ChooseBox TestBox_2[2] = { ChooseBox(10,110,50,20,"确认"),ChooseBox(110,110,50,20,"取消") };
 	int a[3] = { 0,1,2 };
 	switch (UI_Link::getInstance()->Link_ChooseBox(TestBox_1, a, 3, mouse))
@@ -34,11 +33,11 @@ int main()
 	case (1):circle(200, 200, 100); break;
 	case (2):circle(100, 100, 50); break;
 	default:break;
-	}*/
+	}
 	/*文件处理的测试部分*/
-	string path;
+	/*string path;
 	cin >> path;
-	Folder::getInstance()->GetFiles(path);
+	Folder::getInstance()->GetFiles(path);*/
 	getchar();
 }
 
