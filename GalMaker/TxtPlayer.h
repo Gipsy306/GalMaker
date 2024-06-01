@@ -32,4 +32,5 @@ public:
 	COLORREF TextColor(string sets);
 };
 
+
 #endif // !TXTPLAYER_H

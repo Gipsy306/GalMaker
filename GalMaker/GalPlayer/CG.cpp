@@ -1,6 +1,10 @@
-#include"DrawCG.h"
+#include"CG.h"
 
-cg::cg(const char* cgPicture)cgPicture(cgPicture){}
+
+void cg::setCGPicture(const char* cgpicture)
+{
+    cgPicture = (char*)cgpicture;
+}
 
 void cg::draw() {
 	IMAGE img;
@@ -8,7 +12,8 @@ void cg::draw() {
 	putimage( 0, 0,&img);
 }
 
-void cg::drawGradually() {
+void cg::CGdrawGradually() 
+{
 	IMAGE img;
 	loadimage(&img, _T(cgPicture), getwidth(), getheight());
 
