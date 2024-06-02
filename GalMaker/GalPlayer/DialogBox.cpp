@@ -8,7 +8,7 @@ dialogBox::dialogBox(int box_x, int box_y, int box__x, int box__y, const char* d
 	sentenceBox(sentenceBox_x, sentenceBox_y, sentenceBox__x, sentenceBox__y, SENTENCECOLOR, SENENCETYPEFACE, sentenceNHeight)
     {
         
-    }//dialogBoxµÄ¹¹Ôìº¯Êı
+    }//dialogBoxçš„æ„é€ å‡½æ•°
 
 void dialogBox::draw(const char* name, const char* sentence) {
 	IMAGE img;
@@ -16,43 +16,42 @@ void dialogBox::draw(const char* name, const char* sentence) {
     putPictureAlpha(box_x, box_y, &img, transparentColor, alpha);
 	nameBox.draw(name);
 	sentenceBox.drawGradually(sentence);
-}//»æÖÆĞÕÃûÎªname£¬Óï¾äÎªsentenceµÄ¶Ô»°¿ò»­Ãæ
+}//ç»˜åˆ¶å§“åä¸ºnameï¼Œè¯­å¥ä¸ºsentenceçš„å¯¹è¯æ¡†ç”»é¢
 
 void dialogBox::emerge(const char* name, const char* sentence) {
     IMAGE img;
     loadimage(&img, _T(dialogBoxBackground), box__x - box_x, box__y - box_y);
 
-    //ÉèÖÃ³¬Ê±Ê±¼äÎª510ºÁÃë
+    //è®¾ç½®è¶…æ—¶æ—¶é—´ä¸º510æ¯«ç§’
     DWORD startTime = GetTickCount();
     DWORD timeout = 510;
 
     int Alpha = 5;
 
-    //ÔÚ510ºÁÃëÄÚ½¥±äÏÔÊ¾±³¾°Í¼£¬²¢¼ì²âÓÃ»§ÊäÈë
+    //åœ¨510æ¯«ç§’å†…æ¸å˜æ˜¾ç¤ºèƒŒæ™¯å›¾ï¼Œå¹¶æ£€æµ‹ç”¨æˆ·è¾“å…¥
     while ((GetTickCount() - startTime < timeout)&&(Alpha<=alpha/5)) {
         putPictureAlpha(box_x, box_y, &img, transparentColor, Alpha);
-        Alpha += 5; //Ôö¼Ó±³¾°Í¼²»Í¸Ã÷¶È
+        Alpha += 5; //å¢åŠ èƒŒæ™¯å›¾ä¸é€æ˜åº¦
 
-        //¼ì²âÓÃ»§ÊäÈë
-        //Èô°´enter¼ü
+        //æ£€æµ‹ç”¨æˆ·è¾“å…¥
+        //è‹¥æŒ‰enteré”®
         if (_kbhit() && _getch() == '\r') {
             putPictureAlpha(box_x, box_y, &img, transparentColor, alpha);
             break;
         }
 
-        //Èç¹û¼ì²âµ½Êó±ê×ó¼üµã»÷
+        //å¦‚æœæ£€æµ‹åˆ°é¼ æ ‡å·¦é”®ç‚¹å‡»
         ExMessage msg;
         if (peekmessage(&msg, EM_MOUSE) && msg.message == WM_LBUTTONDOWN) {
             putPictureAlpha(box_x, box_y, &img, transparentColor, alpha);
             break;
         }
 
-        //ÔİÍ£10ºÁÃë
+        //æš‚åœ10æ¯«ç§’
         Sleep(10);
         
     }
-    putPictureAlpha(box_x, box_y, &img, transparentColor, alpha);//±£Ö¤×îÖÕ»æÖÆ³öÍ¸Ã÷¶ÈÎªÉè¶¨ÖµµÄ±³¾°Í¼
-
+    putPictureAlpha(box_x, box_y, &img, transparentColor, alpha);//ä¿è¯æœ€ç»ˆç»˜åˆ¶å‡ºé€æ˜åº¦ä¸ºè®¾å®šå€¼çš„èƒŒæ™¯å›¾
     nameBox.draw(name);
     sentenceBox.drawGradually(sentence);
 }
