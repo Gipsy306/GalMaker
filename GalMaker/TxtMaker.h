@@ -18,7 +18,7 @@ public:
 		return pFiletoTxt;
 	}
 	void ContentsAdd(const string& save_name,ExMessage mouse);
-	void FileIn(string type, const string& save_name);
+	void FileIn(string type, const string& save_name,ExMessage mouse);
 };
 
 //单例类TexttoTxt,继承于FiletoTxt，主要实现“剧本txt”中文本部分的编写

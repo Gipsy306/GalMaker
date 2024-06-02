@@ -25,7 +25,15 @@ Text_TxtPlay* Text_TxtPlay::pText_TxtPlay = new Text_TxtPlay;
 CG_TxtPlay* CG_TxtPlay::pCG_TxtPlay = new CG_TxtPlay;
 CGtoTxt* CGtoTxt::pCGtoTxt = new CGtoTxt;
 
+<<<<<<< HEAD
+int main()
+=======
+<<<<<<< HEAD
+int main___()
+=======
 int main114514()
+>>>>>>> 23442b55e6858aa247d7c48fe107fdb4e54ff14b
+>>>>>>> 731f7c4d65156685edb0c53cc2be1d64d5dc4738
 
 {
 
@@ -62,8 +70,8 @@ int main114514()
 	/*文件处理的测试部分*/
 	/*string path;
 	cin >> path;
-
-	/*getchar();*/
+	Folder::getInstance()->GetFiles(path, mouse);
+	getchar();*/
 	/*文件转化的演示*/
 	/*Step 1: */
 	/*initgraph(900, 600);
@@ -72,13 +80,15 @@ int main114514()
 		FiletoTxt::getInstance()->FileIn(TexttoTxt::getInstance()->TextSets(mouse), "test.txt");
 	}*/
 	/*Step 2: */
-	initgraph(900, 600);
-	//TxtPlay::getInstacne()->TxtShowCase("test.txt", mouse);
+	/*initgraph(1200, 900);
 	while (1)
 	{
 		FiletoTxt::getInstance()->ContentsAdd("projects/test01/test.txt", mouse);
 	}
-	return 0;
+	return 0;*/
+	/*Step 3:*/
+	initgraph(1600, 900);
+	TxtPlay::getInstacne()->TxtShowCase("projects/test01/test.txt", mouse);
 }
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单

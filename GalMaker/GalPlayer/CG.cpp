@@ -1,19 +1,33 @@
 #include"CG.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 cg::cg(const char* cgPicture):cgPicture(cgPicture){}
 =======
 
+=======
+>>>>>>> 4ff2032e663ee1b7bdacf7994d75c2922bfee11e
 void cg::setCGPicture(const char* cgpicture)
 {
     cgPicture = (char*)cgpicture;
 }
 >>>>>>> 32fd40f237196192c5c54088ab1e06d5dcb33405
 
+<<<<<<< HEAD
+void cg::draw() 
+{
+=======
 void cg::draw() {
+<<<<<<< HEAD
 	IMAGE img;
 	loadimage(&img, _T(cgPicture), getwidth(), getheight());
 	putimage( 0, 0,&img);
+=======
+>>>>>>> 731f7c4d65156685edb0c53cc2be1d64d5dc4738
+    IMAGE img;
+    loadimage(&img, _T(cgPicture), getwidth(), getheight());
+    putimage(0, 0, &img);
+>>>>>>> 4ff2032e663ee1b7bdacf7994d75c2922bfee11e
 }
 
 void cg::CGdrawGradually() 

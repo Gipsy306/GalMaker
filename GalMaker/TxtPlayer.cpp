@@ -31,7 +31,7 @@ void TxtPlay::TypeSort(string sets, string contents)
 	switch (stoi(sets.substr(0,2)))
 	{
 	case(1):Text_TxtPlay::getInstance()->TextShowcase(sets, contents); break;
-	case(2):CG_TxtPlay::getInstacnce()->CGShowcase(sets);
+	case(2):CG_TxtPlay::getInstacnce()->CGShowcase(sets, contents);break;
 
 	default:break;
 	}
@@ -43,9 +43,10 @@ void Text_TxtPlay::TextShowcase(string sets, string contents)
 	outtextxy(0, 0, contents.data());
 }
 //CG设置的处理
-void CG_TxtPlay::CGShowcase(string sets)
+void CG_TxtPlay::CGShowcase(string sets,string contents)
 {
 	int type = stoi(sets.substr(2, 2));
+	Set_CG_Picture(contents.c_str());
 	if (type == 1)CGDraw_Immediately();
 	else CGDraw_Gradually();
 }
