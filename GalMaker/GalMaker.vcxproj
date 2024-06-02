@@ -135,7 +135,11 @@
     <ClCompile Include="GalPlayer\TachieBox.cpp" />
     <ClCompile Include="GalPlayer\test.cpp" />
     <ClCompile Include="GalPlayer\TextBox.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="MainInterface.cpp" />
+=======
+    <ClCompile Include="GalPlayer\MainInterface.cpp" />
+>>>>>>> f948ad27a4c067d8b2abcf3a3e4a6dcaa6d12269
     <ClCompile Include="TxtMaker.cpp" />
     <ClCompile Include="TxtPlayer.cpp" />
     <ClCompile Include="UI.cpp" />
@@ -147,7 +151,11 @@
     <ClInclude Include="GalPlayer\PutPictuerAlpha.h" />
     <ClInclude Include="GalPlayer\TachieBox.h" />
     <ClInclude Include="GalPlayer\TextBox.h" />
+<<<<<<< HEAD
     <ClInclude Include="MainInterface.h" />
+=======
+    <ClInclude Include="GalPlayer\MainInterface.h" />
+>>>>>>> f948ad27a4c067d8b2abcf3a3e4a6dcaa6d12269
     <ClInclude Include="TxtMaker.h" />
     <ClInclude Include="TxtPlayer.h" />
     <ClInclude Include="UI.h" />
