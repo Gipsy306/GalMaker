@@ -3,26 +3,27 @@
 #define MAININTERFACE_H
 #include<iostream>
 #include<graphics.h>
-#include<string>
+#include <string>
+#include <iostream>
+using namespace std;
 
-//实现对bg的导入完成第一步的绘画和修改
+
 class background {
-private:int x, y;	    
-	     
+private:char*MIpicture;    
 public:	  
-	  void setgraph(int x,int y,IMAGE);
-	  void changegraph();
-	  void particles();
+	  background(char*MIpicture) :MIpicture(MIpicture) {};
+	  void setgraph();
+	   //void particles
 };
 
-class TheTitle {
+class Title {
 private: 
 	int x, y;
+	int destWidth, destHeight;
+	char*Tpicture;
 public:
-	//这里的函数只能输出文字。不能实现艺术字，因而还要写一个图片输出的选项。
-	void SetTheTitle1();
-	void TitleChange();
-	void SetTheTitle2();
+	Title(int x, int y, int destWidth, int destHeight, char*Tpicture) :x(x), y(y), destWidth(destWidth), destHeight(destHeight), Tpicture(Tpicture) {};
+	void SetTheTitle();
 };
 
 class buttons {
