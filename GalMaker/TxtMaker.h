@@ -7,6 +7,8 @@
 #include"FileController.h"
 // 调取 "UI" 类
 #include"UI.h"
+//调取文本框的类
+#include"GalPlayer/DialogBox.h"
 //将文件的有关操作写入对应的".txt"文件中
 class FiletoTxt
 {
@@ -54,6 +56,22 @@ public:
 	string CGSpeed(ExMessage mouse);
 };
 
+//单例类DialogtoTxt,继承于FiletoTxt，主要实现“剧本txt”中文本框部分的编写
+class DialogtoTxt :public FiletoTxt
+{
+private:
+	static DialogtoTxt* pDialogtoTxt;
+
+public:
+	static DialogtoTxt* getInstacne()
+	{
+		return pDialogtoTxt;
+	}
+	//设置文本框配置的函数
+	string DialogSets(ExMessage mouse);
+	/*设置是否改变背景的图片格式*/
+	string DialogBK(ExMessage mouse);
+};
 string CharToStr(char*);
 
 #endif // !TXTMAKER_H

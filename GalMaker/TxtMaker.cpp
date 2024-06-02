@@ -5,9 +5,9 @@ void FiletoTxt::ContentsAdd(const string& save_name,ExMessage mouse)
 {
 	ChooseBox AddChoose[6] =
 	{
-		ChooseBox(250,100,300,50,"添加文本内容"),
-		ChooseBox(250,180,300,50,"添加(转换)CG"),
-		ChooseBox(250,260,300,50,"     NULL   "),
+		ChooseBox(250,100,300,50,"添加纯文本内容"),
+		ChooseBox(250,180,300,50,"添加(转换) CG "),
+		ChooseBox(250,260,300,50,"添加文本框内容"),
 		ChooseBox(250,340,300,50,"     NULL   "),
 		ChooseBox(250,420,300,50,"     NULL   "),
 		ChooseBox(250,500,300,50,"  放弃编辑  ")
@@ -17,7 +17,7 @@ void FiletoTxt::ContentsAdd(const string& save_name,ExMessage mouse)
 	{
 	case(0):cleardevice(); FileIn(TexttoTxt::getInstance()->TextSets(mouse),save_name,mouse); break;
 	case(1):cleardevice(); FileIn(CGtoTxt::getInstacne()->CGSets(mouse),save_name,mouse); break;
-	case(2):cleardevice();; break;
+	case(2):cleardevice();FileIn(DialogtoTxt::getInstacne()->DialogSets(mouse),save_name,mouse); break;
 	case(3):cleardevice();; break;
 	case(4):cleardevice();; break;
 	case(5):cleardevice();exit(0); break;
@@ -42,6 +42,7 @@ void FiletoTxt::FileIn(string sets, const string& save_name,ExMessage mouse)
 		else { cout << "存储失败" << endl; }
 		cleardevice();
 	}
+	//对于是CG的情况
 	else if(sets.substr(0,2)=="02")
 	{
 		ofstream out(save_name, ios::out | ios::app);
@@ -54,6 +55,41 @@ void FiletoTxt::FileIn(string sets, const string& save_name,ExMessage mouse)
 		}
 		else { cout << "存储失败" << endl; }
 		cleardevice();
+	}
+	//对于是文本框的情况
+	else if (sets.substr(0, 2) == "03")
+	{
+		//不做图片的修改
+		if (sets.substr(2, 2) == "01")
+		{
+			ofstream out(save_name, ios::out | ios::app);
+			char name_content[20];
+			InputBox(name_content, 20, "请输入对话人的姓名：");
+			char dialog_content[100];
+			InputBox(dialog_content, 100, "请输入对话的内容：");
+			if (out.is_open())
+			{
+				//声明存储的内容
+				out << sets << endl;
+				out << CharToStr(name_content) << "#"<<CharToStr(dialog_content);
+			}
+			else { cout << "存储失败" << endl; }
+			cleardevice();
+		}
+		//进行图片的修改
+		else
+		{
+			ofstream out(save_name, ios::out | ios::app);
+			string temp = Folder::getInstance()->GetFiles("res/dialog", mouse);
+			if (out.is_open())
+			{
+				//存入CG的设置
+				out << sets << endl;
+				out << temp << endl;
+			}
+			else { cout << "存储失败" << endl; }
+			cleardevice();
+		}
 	}
 }
 
@@ -124,7 +160,7 @@ string CGtoTxt::CGSpeed(ExMessage mouse)
 	{
 	case(1):speed_CG = "01"; break;
 	case(2):speed_CG = "02"; break;
-	case(3):speed_CG = "03"; break;
+	case(3): break;
 	default:break;
 	}
 	return speed_CG;
@@ -138,4 +174,35 @@ string CharToStr(char* contentChar)
 		tempStr += contentChar[i];
 	}
 	return tempStr;
+}
+
+//设置文本框配置的函数
+string DialogtoTxt::DialogSets(ExMessage mouse)
+{
+	string sets_dialog = "03";
+	sets_dialog += DialogBK(mouse);
+
+	return sets_dialog;
+}
+
+/*设置是否改变背景的图片格式*/
+string DialogtoTxt::DialogBK(ExMessage mouse)
+{
+
+	string BK_dialog;
+	ChooseBox BKDialogChoose[3] =
+	{
+		ChooseBox(100,10,100,25,"快速放完"),
+		ChooseBox(250,10,100,25,"缓慢播放"),
+		ChooseBox(400,10,100,25,"  退出  ")
+	};
+	int speed[3] = { 1,2,3 };
+	switch (UI_Link::getInstance()->Link_ChooseBox(BKDialogChoose, speed, 3, mouse))
+	{
+	case(1):BK_dialog = "01"; break;
+	case(2):BK_dialog = "02"; break;
+	case(3):break;
+	default:break;
+	}
+	return BK_dialog;
 }

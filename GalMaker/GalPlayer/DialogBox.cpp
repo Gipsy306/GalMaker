@@ -52,15 +52,9 @@ void dialogBox::emerge(const char* name, const char* sentence) {
         
     }
     putPictureAlpha(box_x, box_y, &img, transparentColor, alpha);//保证最终绘制出透明度为设定值的背景图
-<<<<<<< HEAD
+
     nameBox.draw(name);
     sentenceBox.drawGradually(sentence);
 }
-=======
-}
-<<<<<<< HEAD
 
-=======
->>>>>>> 1e900483244df9d217deeebfce636023cacafb1c
->>>>>>> 23442b55e6858aa247d7c48fe107fdb4e54ff14b
->>>>>>> 731f7c4d65156685edb0c53cc2be1d64d5dc4738
+

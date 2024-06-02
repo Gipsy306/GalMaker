@@ -10,3 +10,25 @@ res/img\MAP001.png
 res/img\MAP001.png
 0202
 res/img\56789.jpg
+0202
+res/img\123456.jpg
+01000001
+我是王若水
+01000004
+Are You OK？
+0202
+res/img\MAP001.png
+01000001
+11282115145
+0201
+res/img\123456.jpg
+0202
+res/img\MAP001.png
+0202
+res/img\123456.jpg
+0202
+res/img\我是牛宏博.jpg
+0202
+res/img\我是牛宏博.jpg
+0202
+res/img\我是牛宏博.jpg

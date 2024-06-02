@@ -18,9 +18,12 @@ private:
 	int alpha;//背景图片透明度，范围为0~255，255表示不透明
 	TextBox nameBox, sentenceBox;//姓名栏和对话文字栏
 public:
-	dialogBox(int box_x, int box_y, int box__x, int box__y, const char* dialogBoxBackground, COLORREF transparentColor,int alpha,
-		int nameBox_x, int nameBox_y, int nameBox__x, int nameBox__y, COLORREF NAMECOLOR, const char* NAMETYPEFACE, int nameNHeight,
-		int sentenceBox_x, int sentenceBox_y, int sentenceBox__x, int sentenceBox__y, COLORREF SENTENCECOLOR, const char* SENENCETYPEFACE, int sentenceNHeight);//构造函数
+	dialogBox(int box_x, int box_y, int box__x, int box__y,\
+		const char* dialogBoxBackground, COLORREF transparentColor,int alpha,\
+		int nameBox_x, int nameBox_y, int nameBox__x, int nameBox__y, \
+		COLORREF NAMECOLOR, const char* NAMETYPEFACE, int nameNHeight,
+		int sentenceBox_x, int sentenceBox_y, int sentenceBox__x, int sentenceBox__y,\
+		COLORREF SENTENCECOLOR, const char* SENENCETYPEFACE, int sentenceNHeight);//构造函数
 	void draw(const char* name, const char* sentence);//显示一句对话
 	void emerge(const char* name, const char* sentence);
 };
