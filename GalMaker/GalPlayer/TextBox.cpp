@@ -26,7 +26,8 @@ void TextBox::drawGradually(const char* content) {
 
         //ºÏ≤‚”√ªß ‰»Î
         //»Ù∞¥enterº¸
-        if (_kbhit() && _getch() == '\r') {
+        if (_kbhit() && _getch() == '\r') 
+        {
             draw(content);
             break;
         }
@@ -37,10 +38,8 @@ void TextBox::drawGradually(const char* content) {
             draw(content);
             break;
         }
-
         //‘›Õ£30∫¡√Î
         Sleep(30);
     }
     draw(content);
-
 }

@@ -3,18 +3,11 @@
 #define MAININTERFACE_H
 #include<iostream>
 #include<graphics.h>
-<<<<<<< HEAD
+
 #include <string>
 #include <iostream>
 using namespace std;
 
-
-=======
-#include<string>
-#include"UI.h"
-using namespace std;
-
-<<<<<<< HEAD:GalMaker/MainInterface.h
 class mainInterface
 {
 =======

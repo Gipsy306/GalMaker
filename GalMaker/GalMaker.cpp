@@ -5,12 +5,11 @@
 #include <iostream>
 #include<graphics.h>
 using namespace std;
-#include"GalPlayer/DialogBox.h"
-#include"GalPlayer/DialogBox.h"
 #include"UI.h"
 #include "FileController.h"
 #include"TxtMaker.h"
 #include"TxtPlayer.h"
+#include"MainInterface.h"
 
 static ExMessage mouse;
 //类外初始化，创建全局变量
@@ -18,14 +17,26 @@ Folder* Folder::pFolder = new Folder;
 UI_File* UI_File::pUI_File = new UI_File;
 UI_Basic* UI_Basic::pUI_Basic = new UI_Basic;
 UI_Link* UI_Link::pUI_Link = new UI_Link;
+
 FiletoTxt* FiletoTxt::pFiletoTxt = new FiletoTxt;
+
 TexttoTxt* TexttoTxt::pTexttoTxt = new TexttoTxt;
 TxtPlay* TxtPlay::pTxtPlay = new TxtPlay;
 Text_TxtPlay* Text_TxtPlay::pText_TxtPlay = new Text_TxtPlay;
+
 CG_TxtPlay* CG_TxtPlay::pCG_TxtPlay = new CG_TxtPlay;
 CGtoTxt* CGtoTxt::pCGtoTxt = new CGtoTxt;
-DialogtoTxt* DialogtoTxt::pDialogtoTxt = new DialogtoTxt;
 
+DialogtoTxt* DialogtoTxt::pDialogtoTxt = new DialogtoTxt;
+DialogBK_TxtPlay* DialogBK_TxtPlay::pDialog_TxtPlay = new DialogBK_TxtPlay;
+DialogWord_TxtPlay* DialogWord_TxtPlay::pDialogWord_TxtPlay = new DialogWord_TxtPlay;
+
+Tachie_TxtPlay* Tachie_TxtPlay::pTachie_TxtPlay = new Tachie_TxtPlay;
+TachietoTxt* TachietoTxt::pTachietoTxt = new TachietoTxt;
+
+mainInterface* mainInterface::pmainInterface = new mainInterface;
+
+extern string file_path = "";
 int main()
 {
 
@@ -79,8 +90,13 @@ int main()
 	}
 	return 0;*/
 	/*Step 3:*/
-	initgraph(1600, 900);
-	TxtPlay::getInstacne()->TxtShowCase("projects/test01/test.txt", mouse);
+	/*initgraph(1600, 900);
+	TxtPlay::getInstacne()->TxtShowCase("projects/test01/test.txt");
+	return 0;*/
+
+	/*总的整合*/
+	
+	mainInterface::getInstance()->init_main(mouse);
 }
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单

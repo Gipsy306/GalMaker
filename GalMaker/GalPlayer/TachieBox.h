@@ -6,7 +6,8 @@
 #include"PutPictuerAlpha.h"
 #include<conio.h>
 
-class tachieBox {
+class tachieBox 
+{
 private:
 	int box_x, box_y;//立绘框左上角位置
 	int box__x, box__y;//立绘右下角位置

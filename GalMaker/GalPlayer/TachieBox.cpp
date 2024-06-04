@@ -4,14 +4,14 @@ tachieBox::tachieBox(int box_x,int box_y,int box__x,int box__y,COLORREF transpar
 
 void tachieBox::draw(const char* character) 
 {
-	IMAGE img;
-	loadimage(&img, _T(character), box__x - box_x, box__y - box_y);
-	putPictureAlpha(box_x, box_y, &img, transparentColor, 255);
+    IMAGE img;
+    loadimage(&img, _T(character));
+    putPictureAlpha(box_x, box_y, &img, transparentColor, 255);
 }
 
 void tachieBox::drawGradually(const char* character) {
 	IMAGE img;
-	loadimage(&img, _T(character), box__x - box_x, box__y - box_y);
+	loadimage(&img, _T(character));
 
     //设置超时时间为510毫秒
     DWORD startTime = GetTickCount();

@@ -9,6 +9,7 @@
 #include"UI.h"
 //调取文本框的类
 #include"GalPlayer/DialogBox.h"
+
 //将文件的有关操作写入对应的".txt"文件中
 class FiletoTxt
 {
@@ -19,7 +20,7 @@ public:
 	{
 		return pFiletoTxt;
 	}
-	void ContentsAdd(const string& save_name,ExMessage mouse);
+	int ContentsAdd(const string& save_name,ExMessage mouse);
 	void FileIn(string type, const string& save_name,ExMessage mouse);
 };
 
@@ -71,8 +72,35 @@ public:
 	string DialogSets(ExMessage mouse);
 	/*设置是否改变背景的图片格式*/
 	string DialogBK(ExMessage mouse);
+	/*设置文本框文本的打印方式*/
+	string DialogSpeed(ExMessage mouse);
+	/*设置文本框文本的颜色*/
+	string DialogColor(ExMessage mouse);
+	/*设置文本框背景图片的打印方式*/
+	string DialogBKSpeed(ExMessage mouse);
+	/*设置文本框背景图片的Alpha值*/
+	string DialogBKAlpha(ExMessage mouse);
 };
-string CharToStr(char*);
 
+//单例类DialogtoTxt,继承于FiletoTxt，主要实现“剧本txt”中文本框部分的编写
+class TachietoTxt :public FiletoTxt
+{
+private:
+	static TachietoTxt* pTachietoTxt;
+public:
+	static TachietoTxt* getInstance()
+	{
+		return pTachietoTxt;
+	}
+	//设置立绘配置的函数
+	string TachieSets(ExMessage mouse);
+	/*设置立绘播放形式的函数*/
+	string TachieSpeed(ExMessage mouse);
+};
+
+/*自定义颜色的输入函数*/
+string SelfSetColor();
+string SelfDeleteColor();
+string ColorCheck(char*);
 #endif // !TXTMAKER_H
 

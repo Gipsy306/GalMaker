@@ -25,7 +25,7 @@ public:
 		int sentenceBox_x, int sentenceBox_y, int sentenceBox__x, int sentenceBox__y,\
 		COLORREF SENTENCECOLOR, const char* SENENCETYPEFACE, int sentenceNHeight);//构造函数
 	void draw(const char* name, const char* sentence);//显示一句对话
-	void emerge(const char* name, const char* sentence);
+	void emerge(const char* name, const char* sentence); //对话框浮现，随后显示一句对话
 };
 
 #endif // !DIALOGBOX_H

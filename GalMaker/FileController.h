@@ -30,11 +30,13 @@ public:
 	}
 	/*获取指定目录下的特定文件*/
 	string GetFiles(string path,ExMessage mouse);
+	string GetTxtFiles(string path, ExMessage mouse);
 	void getFiles(string path, vector<string>& files);
 	
 	/*打开目标文件夹*/
 	void OpenFolder(string choice);
-
+	string CreateProject();
+	string OpenProject(ExMessage mouse);
 };
 
 
@@ -60,4 +62,6 @@ class ImgControl:public FileControl
 private:
 
 };
+
+string CharToStr(char* contentChar);
 #endif // !FILECONTROLLER_H

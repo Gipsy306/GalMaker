@@ -7,7 +7,7 @@
 #include <conio.h>
 
 //单例类
-class cg 
+class cg
 {
 private:
 	static cg* pcg;
@@ -21,6 +21,5 @@ public:
 	void setCGPicture(const char* cgpicture);		//存储CG图片的函数
 	void draw();				//瞬间绘制CG（或BG）的函数
 	void CGdrawGradually();		//渐变绘制出CG（或BG）的函数
-	void MICGdrawGradually();
-
+};
 #endif // !CG_H

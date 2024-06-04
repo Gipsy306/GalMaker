@@ -27,9 +27,6 @@
     <ClCompile Include="UI.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="GalPlayer\MainInterface.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="GalPlayer\CG.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -48,6 +45,12 @@
     <ClCompile Include="GalPlayer\TextBox.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="MainInterface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TxtPlayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TxtMaker.h">
@@ -57,9 +60,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="UI.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="GalPlayer\MainInterface.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="GalPlayer\CG.h">
@@ -77,10 +77,19 @@
     <ClInclude Include="GalPlayer\TextBox.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="MainInterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TxtPlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="文件转txt编码规则.txt">
       <Filter>资源文件</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="test.cd" />
   </ItemGroup>
 </Project>

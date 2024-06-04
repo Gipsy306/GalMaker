@@ -8,7 +8,7 @@ int main114514() {
 	initgraph(1600, 900);
 	dialogBox test(0, 539, 1599, 899, "D:\\test\\纯色对话框.png", RGB(0, 0, 0), 90, 19, 549, 1599, 579, BLACK, "黑体", 25, 19, 589, 1599, 899, BLACK, "黑体", 25);
 	tachieBox ttest(149, 179, 649, 899, 0xfafafa);
-	tachieBox tttest(549, 179, 1049, 899, 0xfafafa);
+	tachieBox tttest(949, 179, 1449, 899, 0xfafafa);
 	cg::getInstacne()->setCGPicture("res/img/123456.jpg");
 	cg::getInstacne()->CGdrawGradually();
 
